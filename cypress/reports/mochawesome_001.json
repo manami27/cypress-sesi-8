@@ -1,0 +1,200 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-08T14:00:01.507Z",
+    "end": "2025-05-08T14:00:14.722Z",
+    "duration": 13215,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5ab51c23-ed22-443a-a81d-4877620e9d9d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\4-e2e-test\\saucedemo-pom.cy.js",
+      "file": "cypress\\e2e\\4-e2e-test\\saucedemo-pom.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4cf3d27d-38c4-4d04-971d-a048688e4003",
+          "title": "Saucedemo Web Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login with valid data-1",
+              "fullTitle": "Saucedemo Web Test Login with valid data-1",
+              "timedOut": null,
+              "duration": 3834,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.visit();\n_loginPage.default.fillUsername(this.data.validUser.username);\n_loginPage.default.fillPassword(this.data.validUser.password);\n_loginPage.default.clickLogin();\n_loginPage.default.verifyLoginSuccess();",
+              "err": {},
+              "uuid": "9f74d3b8-132f-476f-9d0a-cad2d99154e6",
+              "parentUUID": "4cf3d27d-38c4-4d04-971d-a048688e4003",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with valid data-2",
+              "fullTitle": "Saucedemo Web Test Login with valid data-2",
+              "timedOut": null,
+              "duration": 2384,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.loginUser(this.data.validUser);\n_loginPage.default.verifyLoginSuccess();",
+              "err": {},
+              "uuid": "8e865361-4660-4089-a07f-18143e56bfce",
+              "parentUUID": "4cf3d27d-38c4-4d04-971d-a048688e4003",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with locked out user",
+              "fullTitle": "Saucedemo Web Test Login with locked out user",
+              "timedOut": null,
+              "duration": 1463,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.loginUser(this.data.lockedOutUser);\n_loginPage.default.verifyLoginFailed(this.data.lockedOutUser);",
+              "err": {},
+              "uuid": "0a0fb7d8-583a-449a-98ef-444d13840acd",
+              "parentUUID": "4cf3d27d-38c4-4d04-971d-a048688e4003",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with invalid User",
+              "fullTitle": "Saucedemo Web Test Login with invalid User",
+              "timedOut": null,
+              "duration": 1352,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.loginUser(this.data.invalidUser);\n_loginPage.default.verifyLoginFailed(this.data.invalidUser);",
+              "err": {},
+              "uuid": "853fa0ab-c460-4f55-b0bc-5606df15138b",
+              "parentUUID": "4cf3d27d-38c4-4d04-971d-a048688e4003",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add to Cart",
+              "fullTitle": "Saucedemo Web Test Add to Cart",
+              "timedOut": null,
+              "duration": 1970,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.loginUser(this.data.validUser);\n_inventoryPage.default.verifyInventoryPage();\n// Add to cart 2 products\n_inventoryPage.default.addProductToCart(this.products.productNames);\n// Verify products\n_inventoryPage.default.verifyCartItemCount(this.products.productNames.length);",
+              "err": {},
+              "uuid": "16341254-1126-4412-87a0-6cb80871b387",
+              "parentUUID": "4cf3d27d-38c4-4d04-971d-a048688e4003",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add to Cart with Custom Command Login",
+              "fullTitle": "Saucedemo Web Test Add to Cart with Custom Command Login",
+              "timedOut": null,
+              "duration": 1295,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(Cypress.env(\"valid_username\"), Cypress.env(\"valid_password\"));\n_inventoryPage.default.verifyInventoryPage();\n// Add to cart 2 products\n_inventoryPage.default.addProductToCart(this.products.productNames);\n// Verify products\n_inventoryPage.default.verifyCartItemCount(this.products.productNames.length);",
+              "err": {},
+              "uuid": "1fb16966-7203-423e-b7e6-73078b5b81a9",
+              "parentUUID": "4cf3d27d-38c4-4d04-971d-a048688e4003",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9f74d3b8-132f-476f-9d0a-cad2d99154e6",
+            "8e865361-4660-4089-a07f-18143e56bfce",
+            "0a0fb7d8-583a-449a-98ef-444d13840acd",
+            "853fa0ab-c460-4f55-b0bc-5606df15138b",
+            "16341254-1126-4412-87a0-6cb80871b387",
+            "1fb16966-7203-423e-b7e6-73078b5b81a9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12298,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
