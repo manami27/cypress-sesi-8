@@ -1,0 +1,21 @@
+{
+  "name": "my-cypress-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run",
+    "test:e2e": "npx cypress run --headless --spec 'cypress/e2e/4-e2e-test/*.cy.js'",
+    "test:e2e:chrome": "npx cypress run --headless --browser chrome --spec 'cypress/e2e/4-e2e-test/saucedemo-pom.cy.js'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "my-cypress-project": "file:"
+  },
+  "devDependencies": {
+    "cypress": "^14.3.2",
+    "cypress-xpath": "^2.0.1"
+  }
+}
