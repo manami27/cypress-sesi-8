@@ -12,6 +12,6 @@ module.exports = defineConfig({
       valid_username: "standard_user",
       valid_password: "secret_sauce",
     },
-    video: true,
+    video: false,
   },
 });
